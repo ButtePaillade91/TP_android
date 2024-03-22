@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,9 +29,71 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender" />
+
+    <RadioGroup
+        android:id="@+id/add_client_gender_radiogroup"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/add_client_gender_man_radiobutton"
+            android:text="@string/man"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/add_client_gender_woman_radiobutton"
+            android:text="@string/woman"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/age" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/add_client_age_textview"
+            android:layout_width="wrap_content"
+            tools:text="40"
+            android:layout_height="wrap_content">
+        </TextView>
+        <SeekBar
+            android:id="@+id/add_client_age_seekbar"
+            android:min="18"
+            android:max="65"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/level" />
+
+    <Spinner
+        android:id="@+id/add_client_level_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/levels"
+        android:spinnerMode="dialog" />
+
     <Button
         android:id="@+id/add_client_button"
         android:text="@string/add_client_label_button"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
