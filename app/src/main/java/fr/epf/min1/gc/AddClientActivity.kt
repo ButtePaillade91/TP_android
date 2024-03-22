@@ -55,6 +55,7 @@ class AddClientActivity : AppCompatActivity() {
             Log.d(TAG,"Niveau : ${levelSpinner.selectedItem}")
 
             Toast.makeText(this, R.string.add_client_message, Toast.LENGTH_LONG).show()
+            finish()
         }
     }
 }
