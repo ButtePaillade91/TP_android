@@ -17,7 +17,7 @@ class ListClientActivity : AppCompatActivity() {
         recyclerView.layoutManager =
             LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false)
 
-        val clients = Client.generateClients(30)
+        val clients = Client.generateClients()
         recyclerView.adapter = ClientAdapter(clients)
 
     }
