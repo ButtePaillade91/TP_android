@@ -14,8 +14,11 @@ class ClientViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
 const val CLIENT_ID_EXTRA = "clientid"
 
+const val CLIENT_EXTRA: String = "client"
+
 class ClientAdapter(val clients: List<Client>)
     : RecyclerView.Adapter<ClientViewHolder>(){
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClientViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val view  = layoutInflater.inflate(R.layout.client_view,parent,false)
@@ -52,6 +55,7 @@ class ClientAdapter(val clients: List<Client>)
             with(it.context){
                 val intent = Intent(this, DetailsClientActivity::class.java)
                 intent.putExtra(CLIENT_ID_EXTRA, position)
+                intent.putExtra(CLIENT_EXTRA, client)
                 startActivity(intent)
             }
         }
