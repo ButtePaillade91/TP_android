@@ -84,6 +84,7 @@ class HomeActivity : AppCompatActivity(), CountryAdapter.OnItemClickListener {
                 }
             } catch (e: Exception) {
                 Log.e("fetchCountries", "Error fetching countries", e)
+                fetchAllCountries()
                 emptyList()
             }
         }
