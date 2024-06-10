@@ -4,4 +4,13 @@ plugins {
     alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.kotlinAndroid) apply false
 }
-true // Needed to make the Suppress annotation work for the plugins block
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.2.2")
+    }
+}

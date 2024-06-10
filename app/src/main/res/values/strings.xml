@@ -1,13 +1,5 @@
 <resources>
-    <string name="app_name">Gestion Client MIN1</string>
-    <string name="add_form_client_last_name">Nom</string>
-    <string name="add_form_client_first_name">Prenom</string>
-    <string name="add_client_label_button">Ajouter</string>
-    <string name="man">Homme</string>
-    <string name="woman">Femme</string>
-    <string name="gender">Sexe</string>
-    <string name="age">Age</string>
-    <string name="level">Niveau</string>
-    <string name="level_advanced">Avancé</string>
-    <string name="add_client_message">Client Ajouté</string>
+    <string name="app_name">EPF GEOGRAPHY</string>
+    <string name="level_advanced">Advanced</string>
+    <string name="country_flag">Country flag</string>
 </resources>
