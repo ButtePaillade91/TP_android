@@ -1,41 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".CountryDetailActivity">
 
     <ImageView
         android:id="@+id/detail_country_flag"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/country_flag"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/detail_country_name_label"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/detail_country_name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:contentDescription="@string/country_flag" />
+        android:text="Country:"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/detail_country_flag"
+        app:layout_constraintEnd_toStartOf="@id/detail_country_name"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/detail_country_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/detail_country_name_label"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/detail_country_capital_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?attr/textAppearanceHeadline4"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center_horizontal" />
+        android:text="Capital:"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintTop_toBottomOf="@id/detail_country_name"
+        app:layout_constraintStart_toStartOf="@id/detail_country_name_label"
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:id="@+id/detail_country_capital"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAppearance="?attr/textAppearanceBody1"
-        android:layout_marginTop="8dp"
-        android:layout_gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@id/detail_country_name"
+        app:layout_constraintStart_toEndOf="@id/detail_country_capital_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/detail_country_region_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Region:"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintTop_toBottomOf="@id/detail_country_capital"
+        app:layout_constraintStart_toStartOf="@id/detail_country_capital_label"
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:id="@+id/detail_country_region"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textAppearance="?attr/textAppearanceBody1"
-        android:layout_marginTop="8dp"
-        android:layout_gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@id/detail_country_capital"
+        app:layout_constraintStart_toEndOf="@id/detail_country_region_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
